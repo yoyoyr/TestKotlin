@@ -50,7 +50,6 @@ open class Glass public constructor(var a: String) {
         //匿名内部类/对象表达式
         d.setOnClickListener(object : View.OnClickListener {
             override fun onClick(p0: View?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
         })
