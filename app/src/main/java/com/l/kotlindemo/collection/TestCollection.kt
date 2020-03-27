@@ -11,7 +11,8 @@ class TestCollection {
         @JvmStatic
         fun main(args: Array<String>) {
 
-            TestList.testArrayList()
+//            TestList.testArrayList()
+            TestMap.testMap()
         }
 
     }
@@ -78,4 +79,29 @@ object TestList {
 
 object TestMap {
 
+    //不可变map
+    fun testMap() {
+        val map = mapOf("java" to "hello", "kotlin" to "hi", "go" to "hei")
+
+        //map转list
+        val tmp = map.map {
+            "${it.key}有${it.value}节课"
+            1
+        }
+
+        //遍历
+        for (en in map.entries){
+            println(en.key + "  "+en.value)
+        }
+
+
+    }
+
+    fun testHashMap() {
+        val map = hashMapOf<String, String>("java" to "hello", "kotlin" to "hi", "go" to "hei")
+    }
+
+//    fun testLinkedHashMap() {
+//        val map = LinkedHashMap<String, String>("java" to "hello", "kotlin" to "hi", "go" to "hei")
+//    }
 }
